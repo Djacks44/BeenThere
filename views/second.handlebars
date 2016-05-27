@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+
+
+
+
+
+<body>
+<div id="stuff">
+<div id="pic0"></div>
+<div id="pic1"></div>
+<div id="pic2"></div> 
+</div>
+<div id="stuffs">
+<div id="pic3"></div>
+<div id="pic4"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+  
+        </div>
+        <div class="modal-footer">
+        <button id="bt" class="btn btn-default">Been There</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<button id="act">click</button>
+<button><a href="/yelp">Get New Results</a></button>
+
+<style type="text/css">
+#pic0,#pic1, #pic2, #pic3, #pic4{
+  width: 35%;
+  height: auto;
+  border: transparent;
+}
+
+
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  //populate yelp responces to browser
+  function gray(){
+  var queryURL = "api/yelps";
+  $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+  //store responsce in a global variable
+         yelp = response;
+        console.log(response);
+      });
+}
+gray();
+ });
+var b ="b"
+var dummy = [];
+
+ $('#act').on('click', function(){
+
+$("#pic0").append('<h2>'+yelp[0].name+'</h2> <br>'+'<img src="'+ yelp[0].image_url +'">');
+
+$("#pic1").append('<h2>'+yelp[1].name+'</h2> <br>'+'<img src="'+ yelp[1].image_url +'">');
+
+$("#pic2").append('<h2>'+yelp[2].name+'</h2> <br>'+'<img src="'+ yelp[2].image_url +'">');
+
+$("#pic3").append('<h2>'+yelp[3].name+'</h2> <br>'+'<img src="'+ yelp[3].image_url +'">');
+
+$("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_url +'">');
+
+ });
+ // display_phone
+ // snippet_text
+ // location.display_address
+ // url
+
+
+  $('#pic0').on('click', function(){
+
+          $("#resultsModal").modal('toggle');
+
+          $(".modal-header").html('<h2>'+yelp[0].name+'</h2>')
+
+          $(".modal-body").html('<img src="'+ yelp[0].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[0].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[0].snippet_text+'<p>'+'<p>'+'Address: '+yelp[0].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[0].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[0].url+'">'+yelp[0].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+           b=yelp[0]
+
+
+  });
+    $('#pic1').on('click', function(){
+
+          $("#resultsModal").modal('toggle');
+
+          $(".modal-header").html('<h2>'+yelp[1].name+'</h2>')
+
+          $(".modal-body").html('<img src="'+ yelp[1].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[1].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[1].snippet_text+'<p>'+'<p>'+'Address: '+yelp[1].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[1].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[1].url+'">'+yelp[1].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+             b=yelp[1]
+
+
+  });
+      $('#pic2').on('click', function(){
+
+          $("#resultsModal").modal('toggle');
+
+          $(".modal-header").html('<h2>'+yelp[2].name+'</h2>')
+
+          $(".modal-body").html('<img src="'+ yelp[2].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[2].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[2].snippet_text+'<p>'+'<p>'+'Address: '+yelp[2].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[2].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[2].url+'">'+yelp[2].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+            b=yelp[2]
+
+
+  });
+        $('#pic3').on('click', function(){
+
+          $("#resultsModal").modal('toggle');
+
+          $(".modal-header").html('<h2>'+yelp[3].name+'</h2>')
+
+          $(".modal-body").html('<img src="'+ yelp[3].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[3].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[3].snippet_text+'<p>'+'<p>'+'Address: '+yelp[3].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[3].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[3].url+'">'+yelp[3].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+            b=yelp[3]
+
+  });
+          $('#pic4').on('click', function(){
+
+          $("#resultsModal").modal('toggle');
+
+          $(".modal-header").html('<h2>'+yelp[4].name+'</h2>')
+
+          $(".modal-body").html('<img src="'+ yelp[4].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[4].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[4].snippet_text+'<p>'+'<p>'+'Address: '+yelp[4].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[4].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[4].url+'">'+yelp[4].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+
+        b=yelp[4]
+
+
+  });
+
+  $('#bt').on('click', function(){
+            console.log(b.id)
+
+            var id = b.id
+
+            var uID = {uid:id}
+
+        var currentURL = window.location.origin;
+                          
+        // AJAX post the data to the friends API. 
+         $.post(currentURL + "/uhist",uID, function(data){
+          console.log(uID)
+
+
+        });
+
+      var queryURL = "/uhist";
+      $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+      //store responsce in a global variable
+        var btArry = response;
+        console.log(btArry);
+
+        var conArray =Array.from(new Set(btArry));
+        var localArry = JSON.stringify(conArray);
+        localStorage.setItem('userHistory',localArry);
+
+
+        
+
+      });
+
+      var jbtArry = localStorage.getItem('userHistory');
+
+      $.post(currentURL + "/uli", jbtArry, function(data){
+          console.log(jbtArry)
+
+
+        });
+
+
+
+
+  });
+
+
+
+   
+
+
+</script>
+<footer>
+         <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-phone"></i> Call</h4>
+                    <p>555-555-5555</p>
+                </div>
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-map-marker"></i> Visit</h4>
+                    <p>Harborside
+                        <br>Jersey City, NJ 07092</p>
+                </div>
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-envelope"></i> Email</h4>
+                    <p><a href="mailto:mail@example.com">BeenThereDoneThatRCB@Gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row social">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-lg-12">
+                    <p class="small">&copy; 2016 #LaPlaya RCB</p>
+                </div>
+            </div>
+    </footer>
+   <style type="text/css">
+    footer{
+        background-color: black;
+        color: white;
+    }#col-md-4 contact-details{
+        text-align: center;
+    }
+    </style>
+</body>
+</html>

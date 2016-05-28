@@ -187,7 +187,7 @@ $("#pic4").html('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_url
 
           $("#resultsModal").modal('toggle');
 
-          $(".modal-header").html('<h2>'+yelp[0].name+'</h2>')
+          $(".modal-header").html('<h1>'+yelp[0].name+'</h1>')
 
           $(".modal-body").html('<img src="'+ yelp[0].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[0].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[0].snippet_text+'<p>'+'<p>'+'Address: '+yelp[0].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[0].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[0].url+'">'+yelp[0].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[0].location.display_address+'">Navigation</a>'+'<p>')
 

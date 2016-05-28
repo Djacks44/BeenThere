@@ -174,7 +174,7 @@
                 <div class="col-lg-12">
                     <h2>LOGIN</h2>
                     <hr class="colored">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quae, laborum, voluptate delectus odio doloremque error porro obcaecati nemo animi ducimus quaerat nostrum? Ab molestiae eaque et atque architecto reiciendis.</p>
+                    <p>Please login to get started or create an account if you haven't already.</p>
 										<form class="form-horizontal" action="/users/login" method="post">
 										<fieldset>
 
@@ -419,7 +419,7 @@ $('#gps').hide()
             // arrpos.push(pos)
             console.log(pos)
             // json(arrpos)
-            var data = pos
+            var gpsdata = pos
             // data.ready($('#ro').show())
 
            // $('#yo').append('
@@ -439,8 +439,8 @@ $('#gps').hide()
                       //  console.log(data)
                     
                       // AJAX post the data to the friends API. 
-                       $.post(currentURL + "/api/loc",data, function(data){
-                        console.log(data)
+                       $.post(currentURL + "/api/loc",gpsdata, function(data){
+                        console.log(gpsdata)
                         // alert('hello')
                        $("#hides").hide()
 

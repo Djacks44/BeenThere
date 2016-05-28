@@ -1,10 +1,9 @@
 
 {{#unless logged_in}}
+   <body id="page-top">
     <!-- Navigation -->
-    <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,46 +21,26 @@
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
-                    
-
-<!-- 										{{#unless logged_in}} -->
-                                        <li>
+                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-										<li>
-                        <a class="page-scroll" href="#userlogin">Sign In</a>
+                    <li>
+                        <a class="page-scroll" href="#pricing">Login</a>
                     </li>
-										<li>
-                        <a class="page-scroll" href="#userlogin">Sign Up</a>
-                    </li>
-<!-- 										{{/unless}} -->
-
-	<!-- 									{{#if logged_in}}
-                                        <li>
-                        <a class="page-scroll" href="#about">Search</a>
-                    </li>
-										<li>
-                        <a href="/users/sign-out">Sign Out</a>
-                    </li>
-										{{/if}}
-
- -->                    <li>
+                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-
-
-
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+
     </nav>
     <header style="background-image: url('assets/img/city.jpg');">
         <div class="intro-content">
-            <img src="assets/img/bubbles.png" class="img-responsive img-centered" alt="">
+            <a class="page-scroll" href="#pricing"><img src="assets/img/bubbles.png" class="img-responsive img-centered" alt="bubble"></a>
             <div class="brand-name">Been There Done That</div>
             <hr class="colored">
+            <h3>You can click the bubble to get started!</h3>
             <div class="brand-name-subtext"></div>
         </div>
         <div class="scroll-down">
@@ -72,23 +51,9 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-12 wow fadeIn">
-
-<!--                     {{#unless logged_in}} -->
                     <h1>Escape Your Bubble!</h1>
                     <p>Get out of your rut and try something new today.</p>
                     <hr class="colored">
-<!--                     {{/unless}} -->
-                
-
-<!--                     {{#if logged_in}}
-
-                    <h1>Escape Your Bubble!</h1>
-                    <p>Search</p>
-                    <hr class="colored">
-
-                    {{/if}}
- -->
-
                 </div>
             </div>
             <div class="row text-center content-row">
@@ -108,14 +73,14 @@
                 </div>
                 <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".6s">
                     <div class="about-content">
-                        <i class="fa fa-tablet fa-4x"></i>
+                        <i class="fa fa-car fa-4x"></i>
                         <h3>Directions Included</h3>
                         <p>After choosing your destination, we tell you how to get there.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay=".8s">
                     <div class="about-content">
-                        <i class="fa fa-heart fa-4x"></i>
+                        <i class="fa fa-database fa-4x"></i>
                         <h3>Unique User Login</h3>
                         <p>Keep track of the places you have been.</p>
                     </div>
@@ -123,8 +88,87 @@
             </div>
         </div>
     </section>
+    <section class="bg-gray">
+        <div class="container text-center wow fadeIn">
+            <div class="row">       
+                <div class="col-lg-12">
+                    <h2>Our Team</h2>
+                    <p>We are the group of developers who created Been There Done That.</p>
+                    <hr class="colored">
+                </div>
+            </div>
+            <div class="row content-row">
+                <div class="col-lg-12">
+                        <div class="col-lg-3">
+                            <img src="pics/davon_j.jpg" class="img-responsive" alt="">
+                            <div class="caption">
+                                <h3>Davon Jackson</h3>
+                                <hr class="colored">
+                                <p>Full Stack Developer</p>
+                                <ul class="list-inline social">
+                                    <li>
+                                        <a href="https://github.com/Djacks44" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/davon-jackson-491b12100" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/pics/angel_t" class="img-responsive" alt="">
+                            <div class="caption">
+                                <h3>Angel Trinh</h3>
+                                <hr class="colored">
+                                <p>Full Stack Developer</p>
+                                <ul class="list-inline social">
+                                    <li>
+                                        <a href="https://github.com/angelica3010" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/angeltrinh" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/pics/ms_pic" class="img-responsive" alt="">
+                            <div class="caption">
+                                <h3>Mariam Sallam</h3>
+                                <hr class="colored">
+                                <p>Full Stack Developer</p>
+                                <ul class="list-inline social">
+                                    <li>
+                                        <a href="https://github.com/msallam227" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/mariam-sallam-136b11102?authType=name&authToken=d8Ci&trk=contacts-contacts-list-contact_name-0" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/pics/john_s" class="img-responsive" alt="">
+                            <div class="caption">
+                                <h3>John Serencses</h3>
+                                <hr class="colored">
+                                <p>Full Stack Developer</p>
+                                <ul class="list-inline social">
+                                    <li>
+                                        <a href="https://github.com/johnnyluck87" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/john-serencses-476070114" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="userlogin" class="pricing" style="background-image: url('assets/img/bg-pricing.jpg')">
+   <section id="pricing" class="pricing" style="background-image: url('assets/img/bg-pricing.jpg')">
         <div class="container wow fadeIn">
             <div class="row text-center">
                 <div class="col-lg-12">
@@ -172,40 +216,13 @@
 
 
     </section>
-    <section class="cta-form bg-dark">
-        <div class="container text-center">
-            <h3>Subscribe to our newsletter!</h3>
-            <hr class="colored">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- MailChimp Signup Form -->
-                    <div id="mc_embed_signup">
-                        <!-- Replace the form action in the line below with your MailChimp embed action! For more informatin on how to do this please visit the Docs! -->
-                        <form role="form" action="//startbootstrap.us3.list-manage.com/subscribe/post?u=531af730d8629808bd96cf489&amp;id=afb284632f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                            <div class="input-group input-group-lg">
-                                <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address...">
-                                <span class="input-group-btn">
-                                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Subscribe!</button>
-                                </span>
-                            </div>
-                            <div id="mce-responses">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- End MailChimp Signup Form -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
+     <section id="contact">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Contact Us</h2>
                     <hr class="colored">
-                    <p>Reach out to us with any question, concerns, or ideas. We will do our best to get back to you ASAP!</p>
+                    <p>Reach out to us with any questions, concerns, or ideas. We will do our best to get back to you ASAP!</p>
                 </div>
             </div>
             <div class="row content-row">
@@ -244,6 +261,7 @@
             </div>
         </div>
     </section>
+    </section>
     <footer class="footer" style="background-image: url('assets/img/bg-footer.jpg')">
         <div class="container text-center">
             <div class="row">
@@ -262,18 +280,6 @@
                     </p>
                 </div>
             </div>
-            <div class="row social">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <div class="row copyright">
                 <div class="col-lg-12">
                     <p class="small">&copy; 2016 #LaPlaya RCB</p>
@@ -281,155 +287,6 @@
             </div>
         </div>
     </footer>
-    <!-- Portfolio Modals -->
-    <!-- Example Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-1.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="assets/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="assets/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Example Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-2.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="assets/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="assets/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Example Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-3.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="assets/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="assets/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Example Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('assets/img/portfolio/bg-4.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="assets/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="assets/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2015</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     {{/unless}}
 
     {{#if logged_in}}

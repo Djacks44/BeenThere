@@ -23,17 +23,20 @@
 
 
 <body>
+
 <div id="stuff">
+
+
 <div id="pic0"></div>
 <div id="pic1"></div>
-<div id="pic2"></div> 
-</div>
-<div id="stuffs">
+<div id="pic2"></div>
+
+
 <div id="pic3"></div>
 <div id="pic4"></div>
+
+
 </div>
-
-
 
 
 
@@ -66,7 +69,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-  
+
         </div>
         <div class="modal-footer">
         <button id="bt" class="btn btn-default">Been There</button>
@@ -76,14 +79,70 @@
 
     </div>
   </div>
-<button id="act">click</button>
+
+<div class="bottom">
+<center  ><button id="act">Show Results</button>
 <button><a href="/yelp">Get New Results</a></button>
+<button><a href="http://localhost:3000/users/sign-in"> Return Home </button></center>
+</div>
 
 <style type="text/css">
+
+h2{
+  color:#fff;
+}
+#stuff{
+  background-image:url("http://i67.tinypic.com/sll312.jpg");
+/*  background-size: cover;*/
+  border: solid;
+  height: 75%;
+  width: 100%;
+
+
+
+
+}
+
+
+
 #pic0,#pic1, #pic2, #pic3, #pic4{
-  width: 35%;
-  height: auto;
-  border: transparent;
+  width: 25%;
+  height: 45%;
+  border: thin;
+  background-color: black;
+ text-align: center;
+ margin-top: 5px;
+ margin: 12px
+
+}#things{
+border: solid;
+
+}#othings{
+    border: solid;
+    height: 50%;
+
+}#pic0{
+float: left;
+
+
+
+}#pic1{
+float: left;
+margin-left: 10%;
+
+
+}#pic2{
+ float: left;
+ margin-left: 10%;
+
+
+}#pic3{
+  float: right;
+  margin-right: 20%;
+
+}#pic4{
+   margin-left: 20%;
+   float:left;
 }
 
 
@@ -107,15 +166,15 @@ var dummy = [];
 
  $('#act').on('click', function(){
 
-$("#pic0").append('<h2>'+yelp[0].name+'</h2> <br>'+'<img src="'+ yelp[0].image_url +'">');
+$("#pic0").html('<h2>'+yelp[0].name+'</h2> <br>'+'<img src="'+ yelp[0].image_url +'">');
 
-$("#pic1").append('<h2>'+yelp[1].name+'</h2> <br>'+'<img src="'+ yelp[1].image_url +'">');
+$("#pic1").html('<h2>'+yelp[1].name+'</h2> <br>'+'<img src="'+ yelp[1].image_url +'">');
 
-$("#pic2").append('<h2>'+yelp[2].name+'</h2> <br>'+'<img src="'+ yelp[2].image_url +'">');
+$("#pic2").html('<h2>'+yelp[2].name+'</h2> <br>'+'<img src="'+ yelp[2].image_url +'">');
 
-$("#pic3").append('<h2>'+yelp[3].name+'</h2> <br>'+'<img src="'+ yelp[3].image_url +'">');
+$("#pic3").html('<h2>'+yelp[3].name+'</h2> <br>'+'<img src="'+ yelp[3].image_url +'">');
 
-$("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_url +'">');
+$("#pic4").html('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_url +'">');
 
  });
  // display_phone
@@ -130,7 +189,8 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
           $(".modal-header").html('<h2>'+yelp[0].name+'</h2>')
 
-          $(".modal-body").html('<img src="'+ yelp[0].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[0].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[0].snippet_text+'<p>'+'<p>'+'Address: '+yelp[0].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[0].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[0].url+'">'+yelp[0].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+          $(".modal-body").html('<img src="'+ yelp[0].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[0].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[0].snippet_text+'<p>'+'<p>'+'Address: '+yelp[0].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[0].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[0].url+'">'+yelp[0].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[0].location.display_address+'">Navigation</a>'+'<p>')
+
            b=yelp[0]
 
 
@@ -141,7 +201,8 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
           $(".modal-header").html('<h2>'+yelp[1].name+'</h2>')
 
-          $(".modal-body").html('<img src="'+ yelp[1].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[1].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[1].snippet_text+'<p>'+'<p>'+'Address: '+yelp[1].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[1].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[1].url+'">'+yelp[1].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+          $(".modal-body").html('<img src="'+ yelp[1].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[1].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[1].snippet_text+'<p>'+'<p>'+'Address: '+yelp[1].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[1].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[1].url+'">'+yelp[1].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[1].location.display_address+'">Navigation</a>'+'<p>')
+
              b=yelp[1]
 
 
@@ -152,7 +213,8 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
           $(".modal-header").html('<h2>'+yelp[2].name+'</h2>')
 
-          $(".modal-body").html('<img src="'+ yelp[2].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[2].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[2].snippet_text+'<p>'+'<p>'+'Address: '+yelp[2].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[2].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[2].url+'">'+yelp[2].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+          $(".modal-body").html('<img src="'+ yelp[2].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[2].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[2].snippet_text+'<p>'+'<p>'+'Address: '+yelp[2].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[2].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[2].url+'">'+yelp[2].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[2].location.display_address+'">Navigation</a>'+'<p>')
+
             b=yelp[2]
 
 
@@ -163,7 +225,8 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
           $(".modal-header").html('<h2>'+yelp[3].name+'</h2>')
 
-          $(".modal-body").html('<img src="'+ yelp[3].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[3].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[3].snippet_text+'<p>'+'<p>'+'Address: '+yelp[3].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[3].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[3].url+'">'+yelp[3].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+          $(".modal-body").html('<img src="'+ yelp[3].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[3].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[3].snippet_text+'<p>'+'<p>'+'Address: '+yelp[3].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[3].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[3].url+'">'+yelp[3].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[3].location.display_address+'">Navigation</a>'+'<p>')
+
             b=yelp[3]
 
   });
@@ -173,7 +236,7 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
           $(".modal-header").html('<h2>'+yelp[4].name+'</h2>')
 
-          $(".modal-body").html('<img src="'+ yelp[4].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[4].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[4].snippet_text+'<p>'+'<p>'+'Address: '+yelp[4].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[4].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[4].url+'">'+yelp[4].name+'</a>'+'<p>'+'<p>'+'<a href="/navigation">Navigation</a>'+'<p>')
+          $(".modal-body").html('<img src="'+ yelp[4].image_url +'" height=175, width=175><br>'+ '<br><img src="'+ yelp[4].rating_img_url_large +'"height=35, width=175><br><br>'+'<p>'+'Reviews: '+ yelp[4].snippet_text+'<p>'+'<p>'+'Address: '+yelp[4].location.display_address+'<p>'+'<p>'+'Phone: '+yelp[4].display_phone+'<p>'+'<p>'+'Yelp Url: '+'<a href="'+yelp[4].url+'">'+yelp[4].name+'</a>'+'<p>'+'<p>'+'<a target="_blank" href="https://www.google.com/maps/dir/current+location/'+yelp[4].location.display_address+'">Navigation</a>'+'<p>')
 
         b=yelp[4]
 
@@ -188,8 +251,8 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
             var uID = {uid:id}
 
         var currentURL = window.location.origin;
-                          
-        // AJAX post the data to the friends API. 
+
+        // AJAX post the data to the friends API.
          $.post(currentURL + "/uhist",uID, function(data){
           console.log(uID)
 
@@ -207,7 +270,7 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
         localStorage.setItem('userHistory',localArry);
 
 
-        
+
 
       });
 
@@ -226,7 +289,7 @@ $("#pic4").append('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_u
 
 
 
-   
+
 
 
 </script>

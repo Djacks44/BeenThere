@@ -130,6 +130,7 @@ app.get('/yelp', function(req, res){
             console.error(err);
           });
           }
+
           yelpz();
 
 

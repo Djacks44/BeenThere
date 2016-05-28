@@ -100,7 +100,7 @@
             <div class="row content-row">
                 <div class="col-lg-12">
                         <div class="col-lg-3">
-                            <img src="pics/davon_j.jpg" class="img-responsive" alt="">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAgiAAAAJDZhMGIzN2IzLTVjM2QtNDQxMy1hMjE0LTZkMGExNGNjNDA3MA.jpg" class="img-responsive" alt="">
                             <div class="caption">
                                 <h3>Davon Jackson</h3>
                                 <hr class="colored">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <img src="/pics/angel_t" class="img-responsive" alt="">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhKAAAAJDJjMDM1NjA0LWFkZGMtNGUyMS1hMGEyLWM4ZjU3MWQyZWEyZg.jpg" class="img-responsive" alt="">
                             <div class="caption">
                                 <h3>Angel Trinh</h3>
                                 <hr class="colored">
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <img src="/pics/ms_pic" class="img-responsive" alt="">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVXAAAAJDcwOTFmOTc5LWY1MjEtNDYyYy04MzdlLTExYmNjMDUyYzZjYQ.jpg" class="img-responsive" alt="">
                             <div class="caption">
                                 <h3>Mariam Sallam</h3>
                                 <hr class="colored">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <img src="/pics/john_s" class="img-responsive" alt="">
+                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAg1AAAAJDY3YTg2MDQ3LWE0NzItNDY5NC05ZjJlLTU2NDNiMTU0OGUxNA.jpg" class="img-responsive" alt="">
                             <div class="caption">
                                 <h3>John Serencses</h3>
                                 <hr class="colored">
@@ -391,6 +391,9 @@
 // HTML5 geolocation.
 $(document).ready(function(){
     function red(){
+        if(localStorage.getItem('userHistory') == null){
+            console.log('no history')
+        }else{
    var jbtArry = localStorage.getItem('userHistory');
    var jbtObj = {fry:jbtArry}
     var currentURL = window.location.origin;
@@ -398,6 +401,7 @@ $(document).ready(function(){
           console.log(jbtObj)
 
         });
+  }
        }
     red();
 })

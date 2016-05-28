@@ -3,6 +3,8 @@
 CREATE DATABASE cat_db;
 USE cat_db;
 
+USE qqlsctftnumzfav0; 
+
 CREATE TABLE users
 (
 	id int NOT NULL AUTO_INCREMENT,

@@ -5,6 +5,7 @@ var cat = require('../models/cat.js');
 var user = require('../models/user.js');
 var connection = require('../config/connection.js');
 
+
 //this is the users_controller.js file
 router.get('/profile/:id', function(req, res){
 
@@ -32,7 +33,7 @@ router.get('/sign-in', function(req,res) {
 
 router.get('/sign-out', function(req,res) {
   req.session.destroy(function(err) {
-     res.redirect('/cats')
+     res.redirect('/btclear')
   })
 });
 

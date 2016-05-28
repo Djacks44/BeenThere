@@ -17,6 +17,7 @@ var strArry = [];
 var btArry = [];
 
 
+
 var app = express();
 
 //allow sessions
@@ -289,10 +290,17 @@ pos = "";
 locArry = [];
 yelpArr = [];
 strArry = [];
+res.redirect('/')
  
 });
 app.get('/second', function(req, res){
 res.render('second');
+ 
+});
+
+app.get('/btclear', function(req, res){
+btArry=[];
+res.redirect('/')
  
 });
 

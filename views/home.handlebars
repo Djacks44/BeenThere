@@ -389,22 +389,22 @@
 <script src="http://malsup.github.com/jquery.form.js"></script> 
 <script type="text/javascript">
 // HTML5 geolocation.
-$(document).ready(function(){
-    function red(){
-        if(localStorage.getItem('userHistory') == null){
-            console.log('no history')
-        }else{
-   var jbtArry = localStorage.getItem('userHistory');
-   var jbtObj = {fry:jbtArry}
-    var currentURL = window.location.origin;
-      $.post(currentURL + "/uli",jbtObj, function(data){
-          console.log(jbtObj)
+// $(document).ready(function(){
+//     function red(){
+//         if(localStorage.getItem('userHistory') == null){
+//             console.log('no history')
+//         }else{
+//    var jbtArry = localStorage.getItem('userHistory');
+//    var jbtObj = {fry:jbtArry}
+//     var currentURL = window.location.origin;
+//       $.post(currentURL + "/uli",jbtObj, function(data){
+//           console.log(jbtObj)
 
-        });
-  }
-       }
-    red();
-})
+//         });
+//   }
+//        }
+//     red();
+// })
 
 
 $('#gps').hide()
@@ -436,13 +436,15 @@ $('#gps').hide()
 
               $('#gps').on('click', function(){
                        var currentURL = window.location.origin;
+
                       //  console.log(data)
                     
                       // AJAX post the data to the friends API. 
                        $.post(currentURL + "/api/loc",gpsdata, function(data){
                         console.log(gpsdata)
                         // alert('hello')
-                       $("#hides").hide()
+                        $("#hides").hide()
+                       
 
                    });
 

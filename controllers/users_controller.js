@@ -4,6 +4,16 @@ var router = express.Router();
 var cat = require('../models/cat.js');
 var user = require('../models/user.js');
 var connection = require('../config/connection.js');
+var request = require('request');
+var mongojs = require('mongojs');
+var databaseUrl = "btdt";
+var collections = ["users"];
+var username = "yellow";
+var db = mongojs(databaseUrl, collections);
+db.on('error', function(err) {
+  console.log('Database Error:', err);
+});
+
 
 
 //this is the users_controller.js file
@@ -29,11 +39,12 @@ router.get('/new', function(req,res) {
 
 router.get('/sign-in', function(req,res) {
 	res.render('users/sign_in');
+
 });
 
 router.get('/sign-out', function(req,res) {
+	res.redirect('/clear')
   req.session.destroy(function(err) {
-     res.redirect('/btclear')
   })
 });
 
@@ -65,7 +76,12 @@ if(req.body.signin){
             req.session.logged_in = true;
             req.session.user_id = users.id;
             req.session.user_email = users.email;
-            res.redirect('/');
+
+
+
+
+
+            res.redirect('/clear')
 					}
 			});
 
@@ -100,9 +116,22 @@ if(req.body.signup){
 
                 req.session.logged_in = true;
                 req.session.user_id = user.id;
-                req.session.user_email = user.email;
+                req.session.user_email = req.body.email;
 
-                res.redirect('/')
+                console.log(req.session.user_email)
+
+                 var bog = {name: req.session.user_email, btArry: []};
+
+              db.users.insert(bog, function(err, found) {
+			      if (err) {
+			        console.log(err);
+			      } else {
+			      	console.log(found)
+			      	console.log('successfull')
+			      }
+			  }); 
+
+                res.redirect('/clear')
             	});
 
 						});
@@ -136,7 +165,22 @@ router.post('/create', function(req,res) {
                 req.session.user_id = user.id;
                 req.session.user_email = user.email;
 
-                res.redirect('/')
+
+                   var bog = {name: users.email};
+
+              db.users.save(bog, function(err, found) {
+			      if (err) {
+			        console.log(err);
+			      } else {
+			      	console.log(found)
+			      	console.log('successfull')
+			      }
+			  }); 
+
+
+
+
+                res.redirect('/clear')
             	});
 
 						});

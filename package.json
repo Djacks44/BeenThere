@@ -16,8 +16,10 @@
     "express-handlebars": "^2.0.1",
     "express-session": "^1.13.0",
     "method-override": "^2.3.5",
+    "mongojs": "^2.4.0",
     "mysql": "^2.10.2",
     "node-geocoder": "^3.10.0",
+    "request": "^2.72.0",
     "yelp": "^1.0.1"
   },
   "devDependencies": {

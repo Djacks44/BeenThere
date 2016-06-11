@@ -259,28 +259,28 @@ $("#pic4").html('<h2>'+yelp[4].name+'</h2> <br>'+'<img src="'+ yelp[4].image_url
 
         });
 
-      var queryURL = "/uhist";
-      $.ajax({url: queryURL, method: 'GET'}).done(function(response){
-      //store responsce in a global variable
-        var btArry = response;
-        console.log(btArry);
+      // var queryURL = "/uhist";
+      // $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+      // //store responsce in a global variable
+      //   var btArry = response;
+      //   console.log(btArry);
 
-        var conArray =Array.from(new Set(btArry));
-        var localArry = JSON.stringify(conArray);
-        localStorage.setItem('userHistory',localArry);
-
-
+      //   var conArray =Array.from(new Set(btArry));
+      //   var localArry = JSON.stringify(conArray);
+      //   localStorage.setItem('userHistory',localArry);
 
 
-      });
-
-      var jbtArry = localStorage.getItem('userHistory');
-
-      $.post(currentURL + "/uli", jbtArry, function(data){
-          console.log(jbtArry)
 
 
-        });
+      // });
+
+      // var jbtArry = localStorage.getItem('userHistory');
+
+      // $.post(currentURL + "/uli", jbtArry, function(data){
+      //     console.log(jbtArry)
+
+
+      //   });
 
 
 

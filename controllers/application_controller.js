@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 var request = require('request');
 var mongojs = require('mongojs');
-var databaseUrl = "btdt";
+var databaseUrl = "mongodb://dvac:snowman@ds035583.mlab.com:35583/heroku_jmhqwxzw?authMode=scram-sha1&rm.tcpNoDelay=true";
 var collections = ["users"];
 
 
@@ -486,6 +486,20 @@ router.get('/clear', function(req, res){
             console.log(edited);
           }
         });
+
+   db.users.find({
+        'name': name
+    }, function(err, found){
+        if (err) {
+            console.log(err);
+            res.send(err);
+        } else {
+          console.log('Loooooooooook')
+          console.log(found)
+        }
+    });
+
+
 
 
 

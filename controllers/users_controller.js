@@ -6,7 +6,7 @@ var user = require('../models/user.js');
 var connection = require('../config/connection.js');
 var request = require('request');
 var mongojs = require('mongojs');
-var databaseUrl = "btdt";
+var databaseUrl = "mongodb://dvac:snowman@ds035583.mlab.com:35583/heroku_jmhqwxzw?authMode=scram-sha1&rm.tcpNoDelay=true";
 var collections = ["users"];
 var username = "yellow";
 var db = mongojs(databaseUrl, collections);

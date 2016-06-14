@@ -10,7 +10,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 var request = require('request');
 var mongojs = require('mongojs');
-var databaseUrl = "btdt";
+
+var databaseUrl = "mongodb://dvac:snowman@ds035583.mlab.com:35583/heroku_jmhqwxzw?authMode=scram-sha1&rm.tcpNoDelay=true";
 var collections = ["users"];
 
 

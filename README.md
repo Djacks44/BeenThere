@@ -8,10 +8,10 @@ Been There, Done That is a web app that solves monotony and helps people try new
 
 ##Contributors:
 
-<a href="https://github.com/Djacks44"> - Davon Jackson</a>
-<a href="https://github.com/msallam227"> - Mariam Sallam </a>
-<a href="https://github.com/johnnyluck87"> - John Serencses </a>
-<a href="https://github.com/angelica3010"> - Angel Trinh </a>
+- <a href="https://github.com/Djacks44">  Davon Jackson</a>
+- <a href="https://github.com/msallam227">  Mariam Sallam </a>
+- <a href="https://github.com/johnnyluck87">  John Serencses </a>
+- <a href="https://github.com/angelica3010">  Angel Trinh </a>
 
 
 
